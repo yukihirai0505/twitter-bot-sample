@@ -20,7 +20,7 @@ $result = $conn->post('statuses/update',$params);
 
 if($result->text) {
   echo "【" . $result->text . "】とTwitterに投稿しました。";
-} else if($result->errors){
+} else if(sizeof($result->errors) > 0) {
   /* error message: Status is a duplicate. となっているときは同じ投稿を何回も繰り返すと返ってくるエラー */
   $errors = $result->errors;
   foreach ($errors as $error) {
