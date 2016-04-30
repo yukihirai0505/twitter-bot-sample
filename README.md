@@ -33,9 +33,9 @@ $conn = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN,ACCESS_TOKE
 /* messagesの中身でランダムにつぶやくメッセージを登録しておくことができる */
 $messages = array(
   "グー",
-    "チョキ",
-      "パー",
-        );
+  "チョキ",
+  "パー",
+  );
   
   $random = rand(0, count($messages)-1);
   
