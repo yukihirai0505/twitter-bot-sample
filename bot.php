@@ -26,6 +26,8 @@ if($result->text) {
   foreach ($errors as $error) {
     echo "error message: " . $error->message;
   }
+} else {
+  echo "何か不測の事態が発生しているようだ。おれには手に負えないぜ";
 }
 
 /* デバッグしたいときは下記のコメントを外す */
