@@ -32,7 +32,10 @@ $result = $conn->post('statuses/update',$params);
 if($result->text) {
   echo "【" . $result->text . "】とTwitterに投稿しました。";
 } else if(sizeof($result->errors) > 0) {
-  /* error message: Status is a duplicate. は同じ投稿を何回も繰り返すと返ってくるエラー */
+  /*
+   * error message: Status is a duplicate. は同じ投稿を何回も繰り返すと返ってくるエラー
+   * error message: Bad Authentication data. はconfig.phpの内容が間違っている可能性大
+   */
   $errors = $result->errors;
   foreach ($errors as $error) {
     echo "error message: " . $error->message;
