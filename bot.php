@@ -38,8 +38,12 @@ if($result->text) {
    */
   $errors = $result->errors;
   foreach ($errors as $error) {
-    echo "error message: " . $error->message;
+    echo "error message: " . $error->message . "<br />";
   }
+  echo "<div style=\"color: red;\">";
+  echo "* error message: Status is a duplicate. は同じ内容の投稿を何回も繰り返すと返ってくるエラー<br/>";
+  echo "* error message: Bad Authentication data. はconfig.phpの内容が間違っている可能性大";
+  echo "</div>";
 } else {
   echo "何か不測の事態が発生しているようだ。チャレンジングなことをしているようだな。おれには手に負えないぜ。そんな時は下記のvar_dumpでデバックしてみよう。";
 }
