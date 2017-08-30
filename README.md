@@ -1,4 +1,9 @@
 # twitter_bot
+
+Twitterのdeveloper画面でアプリを作成
+
+[https://apps.twitter.com/](https://apps.twitter.com/)
+
 PHPでTwitterBotのサンプルを作成(勉強会用)
 
 まずは記録しておいた
